@@ -1,0 +1,631 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap');
+
+* {
+    font-family: 'Source Sans Pro', sans-serif !important;
+}
+
+:root {
+
+    --pink-color: #FF305B;
+    --dark-color: #333333;
+}
+
+body {
+    min-height: 300px;
+    transition: all 1s ease-in-out;
+    overflow-y: hidden;
+}
+
+.text-pink {
+    color: var(--pink-color) !important;
+}
+
+.bg-pink {
+    background-color: var(--pink-color) !important;
+}
+
+
+/* btn scrollTop */
+
+.arrow {
+    bottom: 4%;
+    right: -100%;
+    width: 40px;
+    height: 40px;
+    z-index: 9999;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.arrow > svg {
+    transform: rotate(180deg);
+}
+
+
+
+ /* ========================== Start Header ========================== */
+
+header {
+    background-image: url(../img/header.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.header__layer {
+
+    background-color: rgba(0, 0, 0, 0.7);
+        
+}
+
+.header__content > p {
+    font-weight: 600;
+}
+
+.header__content > h1 {
+    font-size: 4rem !important;
+    color: var(--pink-color);
+    margin-top: -20px;
+}
+
+nav {
+    transition: all 0.5s ease-in-out !important;
+}
+
+.navbar-light .navbar-brand {
+    color: var(--pink-color) !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #FFF !important;
+    transition: all 0.4s ease-in-out !important;
+    font-size: 1.1rem !important;
+    
+}
+
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link:focus {
+    color: var(--pink-color) !important;
+}
+
+svg:not(:host).svg-inline--fa, svg:not(:root).svg-inline--fa {
+    color: #FFF !important;
+}
+
+.navbar-toggler {
+    border: 1px solid #FFF !important;
+}
+
+[aria-expanded="true"] {
+    border: 1px solid var(--pink-color) !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+@media screen  and (min-width:992px){
+    
+    .navbar-nav {
+        background-color: transparent !important;
+    }
+    
+}
+
+@media screen and (max-width:992px) {
+    .navbar-collapse {
+        margin-top: 10px !important;
+    }
+}
+
+
+ /* ========================== End Header ========================== */
+
+
+
+
+/* ========================== Start About ========================== */
+
+.item1 {
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+
+.item1 > .img {
+    top: 4%;
+    right: -8%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.item1 > .img::before {
+    content:"";
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+    transform: scale(0);
+}
+
+.item1 > .img:hover::before {
+    transform: scale(1);
+}
+
+.item1 > .img  > img {
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.item2 > p {
+    border-bottom: 1px dashed gray;
+}
+
+.info > div {
+    font-size: 1.1rem !important;
+}
+
+.info > div > span {
+    color: var(--dark-color) !important;
+    opacity: 0.95 !important;
+}
+
+.item2 .btns > button {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.item2 .btns > button:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width:580px) {
+
+    .item2 .info > div {
+        float: none !important;
+    }
+
+}
+
+@media screen and (max-width:350px) {
+
+    .item2 .btns > button {
+        display: block;
+        margin: 6px 0;
+    }
+
+}
+
+
+/* =========================== End About =========================== */
+
+
+/* ========================== Start Services ========================== */
+
+.Services {
+    background-color: #F1F1F1 !important;
+    min-height: 400px;
+}
+
+.lines > p {
+    height: 1px;
+    width: 5%;
+}
+
+.lines > p:nth-child(2) {
+    width: 15%;
+}
+
+.Services__item > span > svg {
+    color: var(--pink-color) !important;
+}
+
+.Services__item {
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.Services__item:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: #FFF;
+    border-radius: 3px;
+}
+
+.Services__item > h3 {
+    font-size: 1.3rem;
+    font-weight: 600 !important;
+    opacity: 0.9;
+}
+
+.Services__item path {
+    color: #FF305B !important;
+}
+
+
+/* =========================== End Services =========================== */
+
+
+
+
+/* ========================== Start Portfolio ========================== */
+
+.Portfolio {
+    min-height: 500px;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background: transparent !important;
+    color: var(--pink-color) !important;
+}
+
+.nav-pills .nav-link {
+    color: var(--dark-color) !important;
+    font-size: 1.2rem !important;
+    transition: all 0.5s ease-in-out;
+}
+
+.nav-pills .nav-link:hover {
+    color: var(--pink-color) !important;
+}
+
+.Portfolio img {
+    cursor: pointer;
+}
+
+.item__Portfolio {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.item__Portfolio::before {
+    content: "♥";
+    color: #FF305B;
+    font-size: 2rem !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: scale(0);
+    transition: all 0.5s ease-in-out;
+}
+
+.item__Portfolio:hover::before {
+    transform: scale(1);
+}
+
+/* =========================== End Portfolio =========================== */
+
+
+
+
+/* =========================== Start Counter =========================== */
+
+.Counter {
+    background-color: #F1F1F1 !important;
+    min-height: 300px;
+    overflow: hidden;
+}
+
+.item__counter  path {
+    color: var(--pink-color) !important;
+}
+
+/* ============================ End Counter ============================ */
+
+
+
+
+
+/* ============================ Start Testimonial ============================ */
+
+.Testimonial {
+    min-height: 500px !important;
+}
+
+.item__Testimonial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.item__layer {
+    top:0;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 0 , 0 35vh , 15vw 0);
+    z-index: 0;
+}
+
+.item__img {
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+    margin-bottom: 40px;
+    margin-right: 5px;
+}
+
+.item__content {
+    width: 70%;
+    z-index: 1;
+}
+
+.item__content > span {
+    font-size: 15px !important;
+}
+
+.item__content  path {
+    color: #777777 !important;
+}
+
+.item__content > p {
+    font-style: italic !important;
+}
+
+.star path {
+    color: #f1c30d !important;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 2px solid #FF305B;
+    background-color: transparent;
+    transition: all 0.5s ease-in-out;
+}
+
+.carousel-indicators [data-bs-target].active {
+    width: 25px;
+    border-radius: 10px;
+    background-color: #FF305B;
+}
+
+@media screen and (max-width: 992px) {
+    
+    .item__Testimonial {
+        flex-direction: column;
+    }
+
+    .item__content {
+        width: 80%;
+        z-index: 1;
+        margin-left: 15px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .item__Testimonial {
+        width: 100% !important; 
+    }
+
+    .item__layer {
+        clip-path: polygon(0 0 , 0 40vh , 20vw 0);
+    }
+
+    .item__img {
+        margin-bottom: 30px;
+        margin-right: 0;
+    }
+
+}
+
+/* ============================== End Testimonial ============================ */
+
+
+
+
+/* ============================== Start Blog ============================ */
+
+
+.Blog {
+    min-height: 500px;
+    padding: 100px 0 !important;
+    overflow: hidden !important;
+}
+
+.Blog .card-title {
+    font-weight: 600 !important;
+    opacity: 0.95;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.Blog .card-title:hover {
+    color: var(--pink-color) !important;
+}
+
+.Blog .card-text {
+    opacity: 0.9;
+    font-size: 17px;
+}
+
+.Blog .card-body  a {
+    transition: all 0.5s ease-in-out;
+}
+
+.Blog .card-body  a  path {
+    color: var(--dark-color) !important;
+    transition: all 0.5s ease-in-out;
+}
+
+.Blog .card-body  a:hover , .Blog .card-body  a:hover path {
+    color: var(--pink-color) !important;
+}
+
+/* =============================== End Blog ============================= */
+
+
+
+
+/* =============================== Start Contact ============================= */
+
+
+.Contact {
+    min-height: 500px;
+    overflow: hidden !important;
+}
+
+form > * {
+    caret-color: var(--pink-color) !important;
+}
+
+form input:focus {
+    border-color : var(--pink-color) !important;
+    box-shadow: none !important;
+}
+
+textarea:focus {
+    border-color : var(--pink-color) !important;
+    box-shadow: none !important;
+}
+
+.Contact button {
+    background-color: var(--pink-color) !important;
+    border: 1px solid var(--pink-color) !important;
+    transition: all 0.5s ease-in-out;
+}
+
+.Contact button:hover {
+    background-color: #EC2403 !important;
+}
+
+/* ================================ End Contact ============================== */
+
+
+
+/* ============================ Start Footer ============================ */
+
+.footer {
+    min-height: 150px !important;
+    background-color: var(--dark-color) !important;
+    overflow: hidden;
+}
+
+.footer p {
+    font-size: 1.1rem;
+}
+
+.footer .icon {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.footer .icon > * > svg{
+    color: #FFF !important;
+    transition: all 0.5s ease-in-out;
+    text-decoration: none;
+    font-size: 1.1rem !important;
+}
+
+.footer .icon > * > *:hover {
+    color: var(--pink-color) !important;
+}
+
+/* ============================= End Footer ============================= */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================= Start Spinner ============================= */
+
+
+.loading {
+    background-color: #2C3E50;
+    z-index: 9999999999999999999;
+    transition: all 1s ease-in-out;
+}
+
+.sk-cube-grid {
+    width: 40px;
+    height: 40px;
+    margin: 100px auto;
+  }
+  
+  .sk-cube-grid .sk-cube {
+    width: 33%;
+    height: 33%;
+    background-color: var(--pink-color);
+    float: left;
+    -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+            animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
+  }
+  .sk-cube-grid .sk-cube1 {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s; }
+  .sk-cube-grid .sk-cube2 {
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s; }
+  .sk-cube-grid .sk-cube3 {
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s; }
+  .sk-cube-grid .sk-cube4 {
+    -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s; }
+  .sk-cube-grid .sk-cube5 {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s; }
+  .sk-cube-grid .sk-cube6 {
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s; }
+  .sk-cube-grid .sk-cube7 {
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s; }
+  .sk-cube-grid .sk-cube8 {
+    -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s; }
+  .sk-cube-grid .sk-cube9 {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s; }
+  
+  @-webkit-keyframes sk-cubeGridScaleDelay {
+    0%, 70%, 100% {
+      -webkit-transform: scale3D(1, 1, 1);
+              transform: scale3D(1, 1, 1);
+    } 35% {
+      -webkit-transform: scale3D(0, 0, 1);
+              transform: scale3D(0, 0, 1); 
+    }
+  }
+  
+  @keyframes sk-cubeGridScaleDelay {
+    0%, 70%, 100% {
+      -webkit-transform: scale3D(1, 1, 1);
+              transform: scale3D(1, 1, 1);
+    } 35% {
+      -webkit-transform: scale3D(0, 0, 1);
+              transform: scale3D(0, 0, 1);
+    } 
+  }
+
+/* ============================= End Spinner ============================= */
